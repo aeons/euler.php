@@ -1,0 +1,11 @@
+{
+    "name": "aeons/euler",
+    "description": "Project Euler problems solved in PHP.",
+    "authors": [
+        {
+            "name": "Bjørn Madsen",
+            "email": "bm@aeons.dk"
+        }
+    ],
+    "require": {}
+}
