@@ -7,5 +7,8 @@
             "email": "bm@aeons.dk"
         }
     ],
+    "autoload": {
+        "psr-4": {"Euler\\": "."}
+    },
     "require": {}
 }
