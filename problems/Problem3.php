@@ -16,4 +16,3 @@ class Problem3 implements IProblem
         }
     }
 }
-
