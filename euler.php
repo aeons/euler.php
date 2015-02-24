@@ -3,7 +3,8 @@ namespace Euler;
 
 class Euler 
 {
-    public function run($argv) {
+    public function run($argv)
+    {
         if (count($argv) != 2) {
             echo "Usage: euler <problem-number>\n";
             exit(0);
