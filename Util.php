@@ -22,14 +22,23 @@ class Util
         }
     }
 
+    public static function product($arr)
+    {
+        return array_reduce(
+            $arr,
+            function ($acc, $x) { return $acc * $x; },
+            1
+        );
+    }
+
     public static function sieve($limit)
     {
-        $primes = range(2, $limit);
-        for ($prime = 2; $prime < sqrt($limit); $prime++) {
-            if (isset($primes[$prime])) {
-                for ($i = $prime*$prime; $i < $limit; $i += $prime) {
-                    unset($primes[$i]);
-                }
+        $primes = range(0, $limit);
+        unset($primes[0]);
+        unset($primes[1]);
+        for ($prime = current($primes); $prime < sqrt($limit); $prime = next($primes)) {
+            for ($i = $prime*$prime; $i <= $limit; $i += $prime) {
+                unset($primes[$i]);
             }
         }
         return $primes;
