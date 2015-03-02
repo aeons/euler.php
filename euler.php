@@ -1,7 +1,7 @@
 <?php
 namespace Euler;
 
-class Euler 
+class Euler
 {
     public function run($argv)
     {
@@ -20,7 +20,7 @@ class Euler
         $problem = new $problem_class;
 
         $time_start = microtime(true);
-        $solution = $problem->solve();
+        $solution = number_format($problem->solve(), 0, '', '');
         $time_end = microtime(true);
         $time = $time_end - $time_start;
 
