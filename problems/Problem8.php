@@ -30,7 +30,7 @@ EODATA;
 
     public function solve()
     {
-        $str = str_replace(["\r\n", "\n", "\r"], "", $this->str);
+        $str = str_replace(["\r\n"], "", $this->str);
         $str = str_split($str);
         $max = 0;
         for ($i = 0; $i < 1000 - 13; $i++) {
